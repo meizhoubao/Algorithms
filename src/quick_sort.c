@@ -52,6 +52,7 @@ void quick_sort_2(int a[], int p, int q)
 	}
 }
 
+// Introdution to Algorithms solution
 static inline int partition_3(int a[], int p, int q)
 {
 	int x = a[q];
