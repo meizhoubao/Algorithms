@@ -51,3 +51,29 @@ void quick_sort_2(int a[], int p, int q)
 		quick_sort_2(a, k+1, q);
 	}
 }
+
+static inline int partition_3(int a[], int p, int q)
+{
+	int x = a[q];
+	int i = p - 1, j, tmp;
+	for (j = p; j < q; j++) {
+		if (a[j] <= x) {
+			tmp = a[j];
+			a[j] = a[++i];
+			a[i] = tmp;
+		}
+	}
+	a[q] = a[++i];
+	a[i] = x;
+	return i;
+}
+
+void quick_sort_3(int a[], int p, int q)
+{
+	int k;
+	if (p < q) {
+		k = partition_3(a, p, q);
+		quick_sort_3(a, p, k-1);
+		quick_sort_3(a, k+1, q);
+	}
+}
