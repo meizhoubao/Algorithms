@@ -1,2 +1,2 @@
 # Algorithms
-Introduction to Algorithms
+Introduction to Algorithms, Third Edition
